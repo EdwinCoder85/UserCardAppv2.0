@@ -81,8 +81,9 @@
 body {
   margin: 0;
   font-family: var(--body-font);
-  background: url('./src/assets/fondo.png') no-repeat;
+  background-image: url('./src/images/fondo.png');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
 }
