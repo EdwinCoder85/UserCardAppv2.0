@@ -1,0 +1,139 @@
+.principal-container {
+  margin: var(--sp-2) var(--sp-1-5);
+}
+
+.principal__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-3);
+}
+
+.principal__header .text-animate {
+  position: relative;
+  width: 12.8rem;
+}
+
+.principal__header .text-animate h1 {
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  color: transparent;
+  -webkit-text-stroke: .7px var(--text-title);
+  background-image: linear-gradient(var(--text-title), var(--text-title));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -13rem 0;
+}
+
+.principal-container.show-animate .principal__header .text-animate h1 {
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.principal__header .text-animate h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: var(--sp-0-15) solid var(--text-title);
+  z-index: 1;
+}
+
+.principal-container.show-animate .principal__header .text-animate h1::before {
+  animation: homeCursorText 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.principal__btn {
+  font-size: var(--size-normal);
+  font-weight: var(--weight-medium); 
+  background-color: var(--bg-buttonDefault);
+  color: var(--text-buttonDefault); 
+  padding: var(--sp-0-75); 
+  border-radius: var(--sp-1-25);
+  cursor: pointer;
+  transition: .3s;
+} 
+
+.principal__btn:hover {
+  /* filter: brightness(80%); */
+  background-color: var(--bg-hoverDefault);
+}
+
+.principal__btn i {
+  margin-right: var(--sp-0-15);
+}
+
+.user__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+/** KEYFRAMES ANIMATION **/
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -13rem 0;
+  }
+
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes homeCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .principal-container {
+    margin: var(--sp-2-5) var(--sp-2);
+  }
+
+  .principal__header {
+    margin: 0 auto;
+    margin-bottom: var(--sp-3);
+    width: 1200px;
+  }
+
+  .principal__title {
+    font-weight: var(--weight-bold);
+  }
+
+  .principal__btn {
+    padding: var(--sp-0-75) var(--sp-1) var(--sp-0-75) var(--sp-2);
+  }
+
+  .user__container {
+    margin: 0 auto;
+    display: flex;
+    gap: var(--sp-2) var(--sp-2-5);
+    width: 1200px;
+  }
+
+}
