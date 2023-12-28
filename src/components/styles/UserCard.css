@@ -3,35 +3,18 @@
   max-width: 300px;
   overflow: hidden;
   transition: transform 200ms ease;
-  /* padding: var(--sp-0-25); */
   margin: 0 auto;
+  user-select: none;
 }
-
 .user:hover {
   transform: scale(1.05);
 }
-
-.card__figure {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-}
-
-.card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #09cfdd;
-}
-
 .card {
   position: relative;
   background: #fff;
   border: 3px solid #09cfdd;
   border-radius: 20px;
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -41,94 +24,146 @@
   clip-path: circle(55% at 0 0);
   border-top-left-radius: 10px;
 }
-
 .card-content {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: var(--sp-1);
+  padding: var(--sp-0-75);
 }
-
+.card__figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #09cfdd;
+}
 .card__data {
   display: flex;
   flex-direction: column;
-  color: var(--text-title)
+  color: var(--text-title);
 }
-
 .card__firstname {
-  font-size: var(--size-large);
+  font-size: var(--size-medium);
   font-weight: 600;
   text-align: center;
 }
-
 .card__lastname {
-  font-size: var(--size-medium);
+  font-size: var(--size-normal);
   font-weight: 500;
   text-align: center;
-  margin-bottom: 18px;
 }
-
 .card__email,
 .card__birthday {
-  font-size: var(--size-normal);
+  display: inline-block;
+  font-size: var(--size-tiny);
+  padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .card__email i,
 .card__birthday i {
   color: #09cfdd;
 }
-
 .card__btn-group {
-  width: 110%;
-  height: 40px;
+  width: 100%;
+  height: 30px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
-
 .card__btn {
   position: absolute;
-  width: 120px;
+  width: 80px;
   height: inherit;
-  font-size: var(--size-normal);
+  font-size: var(--size-tiny);
   color: #fff;
-  font-weight: var(--weight-medium);
-  border-radius: 30px;
+  font-weight: var(--weight-bold);
+  padding: 0.5rem 0.2rem;
+  border-radius: 15px;
   border: 2px solid #09cfdd;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-
 .card__btn:nth-child(1) {
-  margin-left: -140px;
+  margin-left: -90px;
   background: #09cfdd;
 }
-
 .card__btn:nth-child(2) {
-  margin-right: -140px;
+  margin-right: -90px;
   color: #09cfdd;
 }
-
 .card__btn:hover {
   border: 2px solid var(--bg-hoverDefault);
   background-color: var(--bg-hoverDefault);
 }
-
 .card__btn:hover:nth-child(2) {
   color: var(--text-hoverTitle);
 }
-
 .card__icon {
-  margin-right: 5px;
-  font-size: 20px;
+  margin-right: 0.2rem;
+  font-size: 12px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 462px) {
   .user {
-    width: 100%;
     max-width: 350px;
     margin: 0;
   }
+  .card__figure {
+    width: 140px;
+    height: 140px;
+  }
+  .card__firstname {
+    font-size: var(--size-large);
+  }
+  .card__lastname {
+    font-size: var(--size-medium);
+  }
+  .card__email,
+  .card__birthday {
+    font-size: var(--size-normal);
+  }
+  .card__btn-group {
+    height: 40px;
+    margin-top: var(--sp-0-75);
+    margin-bottom: var(--sp-0-75);
+  }
+  .card__btn {
+    width: 120px;
+    font-size: var(--size-normal);
+    font-weight: var(--weight-medium);
+    border-radius: 30px;
+  }
+  .card__icon {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  .card__btn:nth-child(1) {
+    margin-left: -140px;
+  }
+  .card__btn:nth-child(2) {
+    margin-right: -140px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+}
+
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1536px) {
 }
