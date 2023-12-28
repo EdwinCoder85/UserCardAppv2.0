@@ -45,6 +45,7 @@ const FormUser = ({
       email: "",
       password: "",
       birthday: "",
+      image_url: ""
     });
   }
 
@@ -70,6 +71,7 @@ const FormUser = ({
       email: "",
       password: "",
       birthday: "",
+      image_url: ""
     });
   }
 
@@ -176,9 +178,11 @@ const FormUser = ({
               {errors.image_url?.type === "required" && "* image_url is required"}
             </small>
           </div>
-          <button /*onClick={handleOpenWarning} */ className="formuser__btn">
-            <i className='bx bxs-save'></i>{updateInfo ? "Save changes" : "Add new user"}
-          </button>
+          <div className="formuser__group formuser__btn-group">
+            <button /*onClick={handleOpenWarning} */ className="formuser__btn">
+              <i className='bx bxs-save'></i>{updateInfo ? "Save changes" : "Add new user"}
+            </button>
+          </div>
         </form>
       </div>
       <WarningUser

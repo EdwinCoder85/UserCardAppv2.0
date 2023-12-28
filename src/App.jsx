@@ -38,7 +38,7 @@ function App() {
                 <h1 className="principal__title">User Crud</h1>
               </div>
               <button className="principal__btn" onClick={handleOpenForm}>
-              <i className='bx bx-plus-medical'></i> Create New User
+              <i className='bx bx-plus-medical'></i>New User
               </button>
             </header>
             <FormUser

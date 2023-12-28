@@ -32,7 +32,6 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpenForm }) => {
         <div className="card">
           <div className="card-content">
             <figure className="card__figure">
-              {/* <img className="card__image" src="./src/assets/img1.jpg" alt="" /> */}
               <img className="card__image" src={user.image_url} alt="" />
             </figure>
 
